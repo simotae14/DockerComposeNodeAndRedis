@@ -46,3 +46,8 @@ services:
     ports:
       - "4001:8081"
 ```
+
+## docker-compose containers status
+You can know the status of the different containers with the command
+`docker-compose ps`
+P.S. you need to launch the command from the same directory of the `docker-compose.yml` file, otherwise you will get an error
