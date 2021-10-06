@@ -23,3 +23,9 @@ const client = redis.createClient({
   port: 6379
 });
 ```
+
+## docker-compose commands
+To run our services we can just launch
+`docker-compose up`
+and visit the url
+[localhost:4001](http://localhost:4001)
