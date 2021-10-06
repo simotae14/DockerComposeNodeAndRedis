@@ -29,3 +29,20 @@ To run our services we can just launch
 `docker-compose up`
 and visit the url
 [localhost:4001](http://localhost:4001)
+
+To rebuild our services we can just launch
+`docker-compose up --build`
+
+## docker-compose automatic container restart
+To define the Restart Policies in case of failure of a container we have to specify it inside the `docker-compose.yml`, for example
+```yaml
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: always
+    build: .
+    ports:
+      - "4001:8081"
+```
